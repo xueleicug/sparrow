@@ -11,6 +11,7 @@
 
         <module>common</module>
         <module>service-register</module>
+        <module>service-base</module>
     </modules>
     <packaging>pom</packaging>
 </project>
