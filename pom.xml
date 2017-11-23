@@ -12,6 +12,7 @@
         <module>common</module>
         <module>service-register</module>
         <module>service-base</module>
+        <module>service-gateway</module>
     </modules>
     <packaging>pom</packaging>
 </project>
