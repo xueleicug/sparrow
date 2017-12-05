@@ -1,6 +1,6 @@
 package com.xl.base.entity;
 
-import com.xl.IdEntity;
+import com.xl.bussiness.base.entity.IdEntity;
 import lombok.Data;
 
 import javax.persistence.Column;

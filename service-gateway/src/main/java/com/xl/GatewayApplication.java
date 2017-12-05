@@ -1,4 +1,4 @@
-package com.xl.gateway;
+package com.xl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.Banner;

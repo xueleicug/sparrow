@@ -1,4 +1,4 @@
-package com.xl;
+package com.xl.bussiness.base.entity;
 
 import lombok.Data;
 
