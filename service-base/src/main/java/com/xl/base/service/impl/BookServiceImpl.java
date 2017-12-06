@@ -7,7 +7,6 @@ import com.xl.framework.cache.RedisCache;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -22,12 +21,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> getAllBooks() {
-        Object o = redisCache.get("kk");
-        if (null == o) {
-           redisCache.put("kk", "testKey");
-        } else {
-            log.debug("get kk" + o.toString());
-        }
+
         return bookDAO.findAll();
     }
 
@@ -38,6 +32,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> getAllBookOrderByBuytimeDesc() {
+
         return bookDAO.findAllByOrderByBuytimeDesc();
     }
 }
