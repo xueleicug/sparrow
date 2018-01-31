@@ -2,9 +2,7 @@ package com.xl.bussiness.base.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @MappedSuperclass
@@ -13,7 +11,8 @@ public class IdEntity implements Serializable {
 
     private static final long serialVersionUID = 2384080237196346611L;
 
-    @Column(name = "id")
+    @Column(name = "id", unique = true, nullable = false)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 }

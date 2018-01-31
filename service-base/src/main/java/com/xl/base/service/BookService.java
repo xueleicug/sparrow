@@ -12,4 +12,12 @@ public interface BookService {
     public List<String> getAllPress();
 
     public List<Book> getAllBookOrderByBuytimeDesc();
+
+    public Book getBookByName(String name);
+
+    public void deleteBookByName(String name);
+
+    public void insertBook(Book book);
+
+    public void updateBook(Book book);
 }

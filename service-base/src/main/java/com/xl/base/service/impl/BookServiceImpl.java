@@ -7,6 +7,8 @@ import com.xl.framework.cache.RedisCache;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @Service
@@ -34,5 +36,28 @@ public class BookServiceImpl implements BookService {
     public List<Book> getAllBookOrderByBuytimeDesc() {
 
         return bookDAO.findAllByOrderByBuytimeDesc();
+    }
+
+    @Override
+    public Book getBookByName(String name) {
+        return bookDAO.findByName(name);
+    }
+
+    @Override
+    @Transactional
+    public void deleteBookByName(String name) {
+        bookDAO.deleteBookByName(name);
+    }
+
+    @Override
+    @Transactional
+    public void insertBook(Book book) {
+        bookDAO.save(book);
+    }
+
+    @Override
+    @Transactional
+    public void updateBook(Book book) {
+        bookDAO.save(book);
     }
 }
