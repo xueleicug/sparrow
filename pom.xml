@@ -15,6 +15,7 @@
         <module>service-base</module>
         <module>service-gateway</module>
         <module>autoconfig</module>
+        <module>service-ram</module>
     </modules>
     <packaging>pom</packaging>
 </project>

@@ -2,6 +2,7 @@ package com.xl.base.entity;
 
 import com.xl.bussiness.base.entity.IdEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import java.sql.Date;
 @Data
 @Entity
 @Table(name = "book")
+@EqualsAndHashCode(callSuper = false)
 public class Book extends IdEntity {
 
     private static final long serialVersionUID = -1505466158512344867L;

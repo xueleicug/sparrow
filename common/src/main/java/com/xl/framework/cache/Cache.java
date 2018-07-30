@@ -1,7 +1,5 @@
 package com.xl.framework.cache;
 
-import java.util.Set;
-
 public interface Cache {
 
     public Object get(String key);

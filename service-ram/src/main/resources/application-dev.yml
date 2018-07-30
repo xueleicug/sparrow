@@ -1,8 +1,8 @@
 spring:
   application:
-    name: base
+    name: ram
   datasource:
-    url: jdbc:mysql://192.168.2.10/info?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.2.10/info?userUnicode=tryue&characterEncoding=utf-8
     username: root
     password: xuelei01
     driver-class-name: com.mysql.jdbc.Driver
@@ -18,17 +18,15 @@ spring:
   guava:
     expire: 120
     maxSize: 100
-
 server:
-  port: 9000
+  port: 9200
 
 info:
   app:
-    name: base service
-    description: base服务
-
-
+    name: ram service
+    description: ram服务
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7070/eureka/
+      defaultZone: http://localhost:7070/eureka
+

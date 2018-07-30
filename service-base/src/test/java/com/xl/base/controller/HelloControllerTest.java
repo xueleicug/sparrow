@@ -44,7 +44,7 @@ public class HelloControllerTest {
         params.add("userType", "master");
         HttpHeaders headers = new HttpHeaders();
         headers.add("Connection", "keep-alive");
-        HttpEntity<MultiValueMap> httpEntity = new HttpEntity<>(params, headers);
+        HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(params, headers);
         ResponseEntity<String> response = restTemplate.postForEntity(base.toString(), httpEntity, String.class);
         log.info(response.getBody());
     }
